@@ -51,23 +51,23 @@ public class DynamicScheduler implements SchedulingConfigurer {
             taskRegistrar.addTriggerTask(() -> scheduleDynamically(), t -> {
                 Calendar nextExecutionTime = new GregorianCalendar();
                 Date lastActualExecutionTime = t.lastActualExecutionTime();
-                if(p.isPossibleToVote()){
+                if (p.isPossibleToVote()) {
                     p.setPossibleToVote(false);
-                    System.out.println("Fecho a sessao!  "+p.isPossibleToVote());
-                    List<Voto>listVoto = votoDAO.findClosePauta(p.getId());
-                    Integer cntSim=0,cntNao=0;
+                    System.out.println("Fecho a sessao!  " + p.isPossibleToVote());
+                    List<Voto> listVoto = votoDAO.findClosePauta(p.getId());
+                    Integer cntSim = 0, cntNao = 0;
 
-                    for (Voto v:listVoto) {
-                        if(v.getVotoEnum()== VotoEnum.NAO){
+                    for (Voto v : listVoto) {
+                        if (v.getVotoEnum() == VotoEnum.NAO) {
                             cntNao++;
-                        }else if (v.getVotoEnum()== VotoEnum.SIM){
+                        } else if (v.getVotoEnum() == VotoEnum.SIM) {
                             cntSim++;
                         }
                     }
                     System.out.println(p.getTexto());
-                    System.out.println("id = "+p.getId());
-                    System.out.println("votos SIM = "+cntSim);
-                    System.out.println("votos NAO = "+cntNao);
+                    System.out.println("id = " + p.getId());
+                    System.out.println("votos SIM = " + cntSim);
+                    System.out.println("votos NAO = " + cntNao);
                     return null;
                 }
                 nextExecutionTime.setTime(lastActualExecutionTime != null ? lastActualExecutionTime : new Date());
