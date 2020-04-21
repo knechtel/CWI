@@ -75,7 +75,7 @@ uma mensagem com o resultado da votação.
       return null;
   }
   ```
-  é usado uma variável transiente para monitorar o tempo em que uma pauta fica disponível para votar.
+  é usado uma variável transiente para monitorar se a pauta disponível para votar.
   
 ``` 
 @Entity(name = "pauta")
