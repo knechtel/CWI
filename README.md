@@ -29,7 +29,9 @@ pode ser considerada como autorizada. A escolha da linguagem, frameworks e bibli
 não infrinja direitos de uso).
 É importante que as pautas e os votos sejam persistidos e que não sejam perdidos com o restart da aplicação.
 
-
+```diff
+++ Os Votos são contabilizados no console da aplicação.
+```
 
 # Tarefa Bônus 1 
 ■ Integração com sistemas externos
