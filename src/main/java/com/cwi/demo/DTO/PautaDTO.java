@@ -26,7 +26,7 @@ public class PautaDTO {
     public Pauta build(PautaDTO pautaDTO){
         Pauta p = new Pauta();
         p.setTexto(pautaDTO.getTexto());
-        p.setSecond(second);
+        p.setSecond(pautaDTO.getSecond());
         return p;
     }
 }
