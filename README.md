@@ -26,6 +26,14 @@ pode ser considerada como autorizada. A escolha da linguagem, frameworks e bibli
 não infrinja direitos de uso).
 É importante que as pautas e os votos sejam persistidos e que não sejam perdidos com o restart da aplicação.
 
+● Tarefa Bônus 1 - Integração com sistemas externos
+○ Integrar com um sistema que verifique, a partir do CPF do associado, se ele pode votar
+■ GET https://user-info.herokuapp.com/users/{cpf}
+■ Caso o CPF seja inválido, a API retornará o HTTP Status 404 (Not found). Você pode
+usar geradores de CPF para gerar CPFs válidos;
+■ Caso o CPF seja válido, a API retornará se o usuário pode (ABLE_TO_VOTE) ou não
+pode (UNABLE_TO_VOTE) executar a operação
+
  Tarefa Bônus 3 - Performance - 
  
  É disparado jobs de maneira performática usando o mínimo de recurso possível do servidor.
