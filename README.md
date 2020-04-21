@@ -28,13 +28,13 @@ não infrinja direitos de uso).
 
  Tarefa Bônus 3 - Performance - 
  
- É disparado jobs de maneira performática usando o minimo de recurso possível do servidor.
+ É disparado jobs de maneira performática usando o mínimo de recurso possível do servidor.
  
  A função da classe DynamicScheduler :
  ```
  public void configureTasks(ScheduledTaskRegistrar taskRegistrar)
  ```
- retorna  null quando não é necessário monitorar a sessao da Pauta.
+ retorna  null quando não é necessário monitorar a sessão da Pauta.
  
  
 ● Tarefa Bônus 4 - Versionamento da API
