@@ -30,15 +30,11 @@ public class VotoController {
     @ResponseBody
     public VotoFormDTO save(@RequestBody VotoDTO votoDTO) {
         if (votoService.associadoVotou(votoDTO)) {
-            VotoFormDTO votoForm = new VotoFormDTO();
-            votoForm.setStatus("UNABLE_TO_VOTE!");
-            return votoForm;
+            return new VotoFormDTO("UNABLE_TO_VOTE!");
         } else {
             Associado associado = associadoService.findById(votoDTO.getIdAssociado());
             Pauta pauta = pautaService.findById(votoDTO.getIdPauta());
-
             List<Pauta> listPauta = Util.getListPauta();
-
 
             for (Pauta pmemory : listPauta) {
                 if (pmemory.getId() == pauta.getId() && pmemory.isPossibleToVote() == true) {
@@ -47,18 +43,12 @@ public class VotoController {
                     voto.setAssociado(associado);
                     voto.setPauta(pauta);
                     votoService.save(voto);
-                    VotoFormDTO votoForm = new VotoFormDTO();
-                    votoForm.setStatus("REGISTERED_VOTE!");
-                    return votoForm;
+                    return new VotoFormDTO("REGISTERED_VOTE!");
                 }
             }
-
-
         }
 
-        VotoFormDTO votoForm = new VotoFormDTO();
-        votoForm.setStatus("UNABLE_TO_VOTE!");
-        return votoForm;
+        return new VotoFormDTO("UNABLE_TO_VOTE!");
 
 
     }
