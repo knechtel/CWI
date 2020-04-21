@@ -12,7 +12,7 @@ public class Pauta implements Serializable {
     private String texto;
     private Integer second;
 
-    private transient boolean possibleToVote =false;
+    private transient boolean possibleToVote = false;
 
     @OneToMany(mappedBy = "pauta")
     private List<Voto> listVoto;
@@ -69,7 +69,6 @@ public class Pauta implements Serializable {
     public void setPossibleToVote(boolean possibleToVote) {
         this.possibleToVote = possibleToVote;
     }
-
 
 
     @Override
