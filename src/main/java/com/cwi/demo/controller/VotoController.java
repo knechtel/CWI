@@ -37,10 +37,10 @@ public class VotoController {
             Associado associado = associadoService.findById(votoDTO.getIdAssociado());
             Pauta pauta = pautaService.findById(votoDTO.getIdPauta());
 
-            List<Pauta> listaPauta = Util.getListPauta();
+            List<Pauta> listPauta = Util.getListPauta();
 
 
-            for (Pauta pmemory : listaPauta) {
+            for (Pauta pmemory : listPauta) {
                 if (pmemory.getId() == pauta.getId() && pmemory.isPossibleToVote() == true) {
                     Voto voto = new Voto();
                     voto.setVotoEnum(votoDTO.getVotoEnum());
