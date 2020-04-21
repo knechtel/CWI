@@ -63,6 +63,11 @@ uma mensagem com o resultado da votação.
 ● Tarefa Bônus 4 - Versionamento da API
 ○ Como você versionaria a API da sua aplicação? Que estratégia usar?
 
-Para cada feature é criada uma branch que ao final é feito um merge para develop, quando fechar uma release é criada uma branch depois da etapa de teste a release  é feito um merge da release para master.
+Para cada funcionalidade é criada um branch feature/0.0.1.
+Uma vez que a funcionalidade é validada nos ambientes de Desenvolvimento e integração, 
+é feito um merge de feature/0.0.1 sobre branch develop, removendo logo apos a branch feature/0.0.1
+
+Uma vez que develop contenha todas as funcionalidades de um delivery, a branch release/feature_1_2_3 deve ser criada a partir de develop.
+No momento em que a branch release/feature_1_2_3 estiver corretamente implantada em produção, um merge de release/feature_1_2_3 na branch master, removendo logo após o branch release/feature_1_2_3.
 
 
