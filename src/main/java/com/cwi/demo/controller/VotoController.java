@@ -26,7 +26,7 @@ public class VotoController {
     @Autowired
     private PautaService pautaService;
 
-    @RequestMapping(value = "/save", consumes = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
+    @RequestMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
     @ResponseBody
     public VotoFormDTO save(@RequestBody VotoDTO votoDTO) {
         if (votoService.associadoVotou(votoDTO)) {
