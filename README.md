@@ -13,7 +13,8 @@ Essa solução deve ser executada na nuvem e promover as seguintes funcionalidad
 REST:
 
 ● Cadastrar uma nova pauta;
-<p style="color:red">**Após cadastrar todas as pautas reinicie o servidor para disparar os jobs.</p>
+p { color: red; }
+<p >**Após cadastrar todas as pautas reinicie o servidor para disparar os jobs.</p>
 ● Abrir uma sessão de votação em uma pauta (a sessão de votação deve ficar aberta por um tempo
 determinado na chamada de abertura ou 1 minuto por default);
 
