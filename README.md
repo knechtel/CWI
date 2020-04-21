@@ -39,5 +39,6 @@ não infrinja direitos de uso).
  
 ● Tarefa Bônus 4 - Versionamento da API
 ○ Como você versionaria a API da sua aplicação? Que estratégia usar?
+Para cada funcionalidade é criada uma branch e quando chega em uma versão também é criada uma branch para versão e a cada versão mais recente e feito um merge para master.
 
 
