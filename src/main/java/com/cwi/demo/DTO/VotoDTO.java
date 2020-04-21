@@ -10,7 +10,7 @@ public class VotoDTO {
     private Integer idPauta;
     private Integer idAssociado;
 
-   
+
 
     public VotoEnum getVotoEnum() {
         return votoEnum;
