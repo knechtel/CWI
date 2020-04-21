@@ -19,8 +19,10 @@ pode ser considerada como autorizada. A escolha da linguagem, frameworks e bibli
 não infrinja direitos de uso).
 É importante que as pautas e os votos sejam persistidos e que não sejam perdidos com o restart da aplicação.
 
- Tarefa Bônus 3 - Performance
+ Tarefa Bônus 3 - Performance - 
+ 
  É disparado jobs de maneira performática usando o minimo de recurso possível do servidor.
+ 
  A função da classe DynamicScheduler :
  ```
  public void configureTasks(ScheduledTaskRegistrar taskRegistrar)
