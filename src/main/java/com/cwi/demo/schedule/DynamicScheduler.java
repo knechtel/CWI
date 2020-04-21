@@ -46,14 +46,14 @@ public class DynamicScheduler implements SchedulingConfigurer {
 
     @Override
     public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
-        for (Pauta p : pautaDAO.findAll()) {
-            Util.getListPauta().add(p);
+        for (Pauta pauta : pautaDAO.findAll()) {
+            Util.getListPauta().add(pauta);
             taskRegistrar.addTriggerTask(() -> scheduleDynamically(), t -> {
                 Calendar nextExecutionTime = new GregorianCalendar();
                 Date lastActualExecutionTime = t.lastActualExecutionTime();
-                if (p.isPossibleToVote()) {
-                    p.setPossibleToVote(false);
-                    List<Voto> listVoto = votoDAO.findClosePauta(p.getId());
+                if (pauta.isPossibleToVote()) {
+                    pauta.setPossibleToVote(false);
+                    List<Voto> listVoto = votoDAO.findClosePauta(pauta.getId());
                     Integer cntSim = 0, cntNao = 0;
 
                     for (Voto v : listVoto) {
@@ -63,19 +63,19 @@ public class DynamicScheduler implements SchedulingConfigurer {
                             cntSim++;
                         }
                     }
-                    System.out.println(p.getTexto());
-                    System.out.println("id = " + p.getId());
+                    System.out.println(pauta.getTexto());
+                    System.out.println("id = " + pauta.getId());
                     System.out.println("votos SIM = " + cntSim);
                     System.out.println("votos NAO = " + cntNao);
                     return null;
                 }
                 nextExecutionTime.setTime(lastActualExecutionTime != null ? lastActualExecutionTime : new Date());
-                nextExecutionTime.add(Calendar.SECOND, p.getSecond());
+                nextExecutionTime.add(Calendar.SECOND, pauta.getSecond());
 
-                if (p.isPossibleToVote()) {
-                    p.setPossibleToVote(false);
+                if (pauta.isPossibleToVote()) {
+                    pauta.setPossibleToVote(false);
                 } else {
-                    p.setPossibleToVote(!p.isPossibleToVote());
+                    pauta.setPossibleToVote(!pauta.isPossibleToVote());
                 }
 
                 return nextExecutionTime.getTime();
