@@ -11,7 +11,6 @@ public class Pauta implements Serializable {
     private Integer id;
     private String texto;
     private Integer second;
-
     private transient boolean possibleToVote = false;
 
     @OneToMany(mappedBy = "pauta")
