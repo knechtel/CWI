@@ -58,6 +58,6 @@ uma mensagem com o resultado da votação.
 ● Tarefa Bônus 4 - Versionamento da API
 ○ Como você versionaria a API da sua aplicação? Que estratégia usar?
 
-Para cada feature é criada uma branch que ao final é feito um merge para develop, quando fechar uma release é criada uma branch depois da etapa de teste a release  é feito um merge para master.
+Para cada feature é criada uma branch que ao final é feito um merge para develop, quando fechar uma release é criada uma branch depois da etapa de teste a release  é feito um merge da release para master.
 
 
