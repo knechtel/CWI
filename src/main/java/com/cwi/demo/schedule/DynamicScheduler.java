@@ -53,7 +53,6 @@ public class DynamicScheduler implements SchedulingConfigurer {
                 Date lastActualExecutionTime = t.lastActualExecutionTime();
                 if (p.isPossibleToVote()) {
                     p.setPossibleToVote(false);
-                    System.out.println("Fecho a sessao!  " + p.isPossibleToVote());
                     List<Voto> listVoto = votoDAO.findClosePauta(p.getId());
                     Integer cntSim = 0, cntNao = 0;
 
