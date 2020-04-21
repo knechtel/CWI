@@ -1,16 +1,15 @@
 package com.cwi.demo.controller;
 
+import com.cwi.demo.Application;
 import com.cwi.demo.DTO.PautaDTO;
-import com.cwi.demo.bean.Pauta;
+
+
 import com.cwi.demo.service.PautaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/pauta")
@@ -23,5 +22,18 @@ public class PautaController {
         pautaService.save(pautaDTO.build(pautaDTO));
         return ResponseEntity.ok().build();
 
+    }
+
+    @GetMapping("/restart")
+    void restart() {
+        Thread restartThread = new Thread(() -> {
+            try {
+                Thread.sleep(1000);
+                Application.restart();
+            } catch (InterruptedException ignored) {
+            }
+        });
+        restartThread.setDaemon(false);
+        restartThread.start();
     }
 }
