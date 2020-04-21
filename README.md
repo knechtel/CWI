@@ -71,6 +71,19 @@ uma mensagem com o resultado da votação.
   }
   ```
   é usado uma variável transiente para monitorar o tempo em que uma pauta fica disponível para votar.
+  
+``` 
+@Entity(name = "pauta")
+public class Pauta implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String texto;
+    private Integer second;
+    private transient boolean possibleToVote = false;
+...//more code 
+```
+ 
  
 ● Tarefa Bônus 4 - Versionamento da API
 ○ Como você versionaria a API da sua aplicação? Que estratégia usar?
