@@ -44,7 +44,7 @@ Classificação da informação: Uso Interno
 feito preferencialmente através de mensageria. Quando a sessão de votação fechar, poste
 uma mensagem com o resultado da votação.
 
- Tarefa Bônus 3 - Performance - 
+ ● Tarefa Bônus 3 - Performance - 
  
  É disparado jobs de maneira performática usando o mínimo de recurso possível do servidor.
  
