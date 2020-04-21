@@ -70,6 +70,7 @@ uma mensagem com o resultado da votação.
       return null;
   }
   ```
+  é usado uma variável transiente para monitorar o tempo em que uma pauta fica disponível para votar.
  
 ● Tarefa Bônus 4 - Versionamento da API
 ○ Como você versionaria a API da sua aplicação? Que estratégia usar?
