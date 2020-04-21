@@ -16,11 +16,6 @@ public class Pauta implements Serializable {
 
     @OneToMany(mappedBy = "pauta")
     private List<Voto> listVoto;
-//    @ManyToMany
-//    @JoinTable(name = "associado_pauta",
-//            joinColumns = @JoinColumn(name = "id_pauta", foreignKey = @ForeignKey(name = "fk_pautaAssociado")),
-//                    inverseJoinColumns = @JoinColumn(name = "id_associado"))
-//     private Set<Associado> listAssociado;
 
     public Integer getSecond() {
         return second;
@@ -53,14 +48,6 @@ public class Pauta implements Serializable {
     public void setListVoto(List<Voto> listVoto) {
         this.listVoto = listVoto;
     }
-
-//    public Set<Associado> getListAssociado() {
-//        return listAssociado;
-//    }
-//
-//    public void setListAssociado(Set<Associado> listAssociado) {
-//        this.listAssociado = listAssociado;
-//    }
 
     public boolean isPossibleToVote() {
         return possibleToVote;

@@ -13,11 +13,6 @@ public class Associado implements Serializable {
     private String cpf;
     @OneToMany(mappedBy = "associado")
     private List<Voto> listVoto;
-//    @ManyToMany
-//    @JoinTable(name = "associado_pauta",
-//            joinColumns = @JoinColumn(name = "id_associado", foreignKey = @ForeignKey(name = "fk_associadoPauta")),
-//            inverseJoinColumns = @JoinColumn(name = "id_pauta"))
-//    private Set<Pauta> listPauta;
 
     public Integer getId() {
         return id;
@@ -42,14 +37,6 @@ public class Associado implements Serializable {
     public void setListVoto(List<Voto> listVoto) {
         this.listVoto = listVoto;
     }
-
-//    public Set<Pauta> getListPauta() {
-//        return listPauta;
-//    }
-//
-//    public void setListPauta(Set<Pauta> listPauta) {
-//        this.listPauta = listPauta;
-//    }
 
     public String getCpf() {
         return cpf;
