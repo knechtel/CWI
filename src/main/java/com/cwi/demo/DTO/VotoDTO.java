@@ -5,18 +5,12 @@ import com.cwi.demo.bean.VotoEnum;
 
 public class VotoDTO {
 
-    private Integer id;
+
     private VotoEnum votoEnum;
     private Integer idPauta;
     private Integer idAssociado;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+   
 
     public VotoEnum getVotoEnum() {
         return votoEnum;
