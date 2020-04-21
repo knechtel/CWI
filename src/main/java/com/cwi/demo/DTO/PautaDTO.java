@@ -1,7 +1,6 @@
 package com.cwi.demo.DTO;
 
 import com.cwi.demo.bean.Pauta;
-import org.springframework.beans.factory.annotation.Value;
 
 public class PautaDTO {
 
