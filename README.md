@@ -32,8 +32,8 @@ não infrinja direitos de uso).
 - Integração com sistemas externos
 ○ Integrar com um sistema que verifique, a partir do CPF do associado, se ele pode votar
 
-->// Aqui eu utilizei serviço da Web para Validar CPF
-  // https://www.treinaweb.com.br/ferramentas-para-desenvolvedores/validar/
+  ->// Aqui eu utilizei serviço da Web para Validar CPF
+    // https://www.treinaweb.com.br/ferramentas-para-desenvolvedores/validar/
 
 ■ GET https://user-info.herokuapp.com/users/{cpf}
 
