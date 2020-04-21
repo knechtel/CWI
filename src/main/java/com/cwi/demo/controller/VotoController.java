@@ -1,6 +1,5 @@
 package com.cwi.demo.controller;
 
-;
 import com.cwi.demo.DTO.VotoDTO;
 import com.cwi.demo.DTO.VotoFormDTO;
 import com.cwi.demo.bean.Associado;
@@ -47,9 +46,6 @@ public class VotoController {
                 }
             }
         }
-
         return new VotoFormDTO("UNABLE_TO_VOTE!");
-
-
     }
 }
