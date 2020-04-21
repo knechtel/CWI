@@ -14,7 +14,8 @@ REST:
 
 ● Cadastrar uma nova pauta;
 ```diff
--- Após cadastrar todas as pautas reinicie o servidor para disparar os jobs.
+-- Após cadastrar todas as pautas reinicie o servidor para disparar os jobs
+-- fazendo um GET http://localhost:8080/api/pauta/restart o servidor é reiniciado e os jobs são disparados.
 ```
 ● Abrir uma sessão de votação em uma pauta (a sessão de votação deve ficar aberta por um tempo
 determinado na chamada de abertura ou 1 minuto por default);
