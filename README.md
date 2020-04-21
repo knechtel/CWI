@@ -26,6 +26,8 @@ não infrinja direitos de uso).
  public void configureTasks(ScheduledTaskRegistrar taskRegistrar)
  ```
  retorna  null quando não é necessário monitorar a sessao da Pauta.
+ 
+ 
 ● Tarefa Bônus 4 - Versionamento da API
 ○ Como você versionaria a API da sua aplicação? Que estratégia usar?
 
