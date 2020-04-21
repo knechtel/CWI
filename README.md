@@ -34,6 +34,7 @@ não infrinja direitos de uso).
 
   ->// Aqui eu utilizei serviço da Web para Validar CPF
     // https://www.treinaweb.com.br/ferramentas-para-desenvolvedores/validar/
+    Para acessar a API externa é usado verbo http POST via retrofit
 
 ■ GET https://user-info.herokuapp.com/users/{cpf}
 
