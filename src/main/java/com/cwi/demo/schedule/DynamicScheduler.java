@@ -1,7 +1,10 @@
 package com.cwi.demo.schedule;
 
 import com.cwi.demo.DAO.PautaDAO;
+import com.cwi.demo.DAO.VotoDAO;
 import com.cwi.demo.bean.Pauta;
+import com.cwi.demo.bean.Voto;
+import com.cwi.demo.bean.VotoEnum;
 import com.cwi.demo.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +25,10 @@ public class DynamicScheduler implements SchedulingConfigurer {
     private static Logger LOGGER = LoggerFactory.getLogger(DynamicScheduler.class);
 
     @Autowired
-    PautaDAO pautaDAO;
+    private PautaDAO pautaDAO;
+
+    @Autowired
+    private VotoDAO votoDAO;
 
     @PostConstruct
     public void initDatabase() {
@@ -48,6 +54,20 @@ public class DynamicScheduler implements SchedulingConfigurer {
                 if(p.isPossibleToVote()){
                     p.setPossibleToVote(false);
                     System.out.println("Fecho a sessao!  "+p.isPossibleToVote());
+                    List<Voto>listVoto = votoDAO.findClosePauta(p.getId());
+                    Integer cntSim=0,cntNao=0;
+
+                    for (Voto v:listVoto) {
+                        if(v.getVotoEnum()== VotoEnum.NAO){
+                            cntNao++;
+                        }else if (v.getVotoEnum()== VotoEnum.SIM){
+                            cntSim++;
+                        }
+                    }
+                    System.out.println(p.getTexto());
+                    System.out.println("id = "+p.getId());
+                    System.out.println("votos SIM = "+cntSim);
+                    System.out.println("votos NAO = "+cntNao);
                     return null;
                 }
                 nextExecutionTime.setTime(lastActualExecutionTime != null ? lastActualExecutionTime : new Date());
