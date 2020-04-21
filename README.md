@@ -26,6 +26,7 @@ pode ser considerada como autorizada. A escolha da linguagem, frameworks e bibli
 não infrinja direitos de uso).
 É importante que as pautas e os votos sejam persistidos e que não sejam perdidos com o restart da aplicação.
 
+// Aqui eu utilizei serviço da Web para Validar CPF
 ● Tarefa Bônus 1 - Integração com sistemas externos
 ○ Integrar com um sistema que verifique, a partir do CPF do associado, se ele pode votar
 
