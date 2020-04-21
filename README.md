@@ -62,9 +62,9 @@ uma mensagem com o resultado da votação.
  ```
  public void configureTasks(ScheduledTaskRegistrar taskRegistrar)
  ```
- retorna  null quando não é necessário monitorar a sessão da Pauta.
+ Retorna  null quando não é necessário monitorar a sessão da Pauta,
  
- linha 65 da classe DynamicScheduler encerra o Job
+ linha 65 da classe DynamicScheduler encerra o Job.
   ```
   if (pauta.isPossibleToVote()) {
       pauta.setPossibleToVote(false);
@@ -75,7 +75,7 @@ uma mensagem com o resultado da votação.
       return null;
   }
   ```
-  é usado uma variável transiente para monitorar se a pauta está disponível para votar.
+  É usado uma variável transiente para monitorar se a pauta está disponível para votar.
   
 ``` 
 @Entity(name = "pauta")
