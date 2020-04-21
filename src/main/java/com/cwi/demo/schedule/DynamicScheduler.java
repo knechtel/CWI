@@ -29,10 +29,7 @@ public class DynamicScheduler implements SchedulingConfigurer {
 
     @Autowired
     private VotoDAO votoDAO;
-
-    @PostConstruct
-    public void initDatabase() {
-    }
+    
 
     @Bean
     public TaskScheduler poolScheduler() {
