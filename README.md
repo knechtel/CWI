@@ -28,7 +28,8 @@ não infrinja direitos de uso).
 
 
 
-● Tarefa Bônus 1 - Integração com sistemas externos
+# Tarefa Bônus 1 
+- Integração com sistemas externos
 ○ Integrar com um sistema que verifique, a partir do CPF do associado, se ele pode votar
 
 ->// Aqui eu utilizei serviço da Web para Validar CPF
@@ -43,13 +44,15 @@ usar geradores de CPF para gerar CPFs válidos;
 pode (UNABLE_TO_VOTE) executar a operação
 
 
-● Tarefa Bônus 2 - Mensageria e filas
+# Tarefa Bônus 2
+- Mensageria e filas
 Classificação da informação: Uso Interno
 ○ O resultado da votação precisa ser informado para o restante da plataforma, isso deve ser
 feito preferencialmente através de mensageria. Quando a sessão de votação fechar, poste
 uma mensagem com o resultado da votação.
 
- ● Tarefa Bônus 3 - Performance - 
+ # Tarefa Bônus 3 
+ - Performance - 
  
  É disparado jobs de maneira performática usando o mínimo de recurso possível do servidor.
  
@@ -85,7 +88,8 @@ public class Pauta implements Serializable {
 ```
  
  
-● Tarefa Bônus 4 - Versionamento da API
+# Tarefa Bônus 4 
+- Versionamento da API
 ○ Como você versionaria a API da sua aplicação? Que estratégia usar?
 
 Para cada funcionalidade é criada um branch feature/0.0.1.
