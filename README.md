@@ -62,23 +62,13 @@ uma mensagem com o resultado da votação.
  linha 65 da classe DynamicScheduler encerra o Job
   ```
   if (pauta.isPossibleToVote()) {
-                    pauta.setPossibleToVote(false);
-                    List<Voto> listVoto = votoDAO.findClosePauta(pauta.getId());
-                    Integer cntSim = 0, cntNao = 0;
-
-                    for (Voto v : listVoto) {
-                        if (v.getVotoEnum() == VotoEnum.NAO) {
-                            cntNao++;
-                        } else if (v.getVotoEnum() == VotoEnum.SIM) {
-                            cntSim++;
-                        }
-                    }
-                    System.out.println(pauta.getTexto());
-                    System.out.println("id = " + pauta.getId());
-                    System.out.println("votos SIM = " + cntSim);
-                    System.out.println("votos NAO = " + cntNao);
-                    return null;
-                }
+      pauta.setPossibleToVote(false);
+      List<Voto> listVoto = votoDAO.findClosePauta(pauta.getId());
+      ...
+      //more code
+      ...
+      return null;
+  }
   ```
  
 ● Tarefa Bônus 4 - Versionamento da API
